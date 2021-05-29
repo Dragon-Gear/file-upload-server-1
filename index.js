@@ -6,7 +6,7 @@ const app = express()
 app.use(upload())
 
 app.get('/', (req , res) => {
-    res.sendFile(__dirname + './dist/index.html')
+    res.sendFile(__dirname + '/index.html')
 })
 
 
@@ -19,7 +19,7 @@ app.post('/' , (req, res )=> {
 
 
 
-        file.mv('/dist/uploads/'+filename, function(err){
+        file.mv('/uploads/'+filename, function(err){
             if (err) {
                 res.send(err)
             } else{
